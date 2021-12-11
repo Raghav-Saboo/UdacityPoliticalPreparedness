@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+  <ConstraintSet android:id="@+id/start">
+    <Constraint
+        android:id="@+id/electionNameToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        motion:layout_constraintTop_toTopOf="parent" />
+
+    <Constraint
+        android:id="@+id/electionDateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding"
+        android:layout_marginStart="@dimen/default_padding"
+        android:layout_marginEnd="@dimen/default_padding"
+        motion:layout_constraintEnd_toEndOf="parent"
+        motion:layout_constraintStart_toStartOf="parent"
+        motion:layout_constraintTop_toBottomOf="@id/electionNameToolbar" />
+
+    <Constraint
+        android:id="@+id/stateHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:visibility="invisible"
+        motion:layout_constraintStart_toStartOf="@id/electionDateTextView"
+        motion:layout_constraintTop_toTopOf="@+id/electionDateTextView" />
+
+    <Constraint
+        android:id="@+id/stateLocations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:visibility="invisible"
+        motion:layout_constraintStart_toStartOf="@id/electionDateTextView"
+        motion:layout_constraintTop_toBottomOf="@id/stateHeader" />
+
+    <Constraint
+        android:id="@+id/stateBallot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:visibility="invisible"
+        motion:layout_constraintStart_toStartOf="@id/electionDateTextView"
+        motion:layout_constraintTop_toBottomOf="@id/stateLocations" />
+
+    <Constraint
+        android:id="@+id/stateGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        motion:constraint_referenced_ids="stateHeader,stateLocations,stateBallot" />
+
+    <Constraint
+        android:id="@+id/addressGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        motion:constraint_referenced_ids="stateCorrespondenceHeader,address" />
+
+    <Constraint
+        android:id="@+id/stateCorrespondenceHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:visibility="invisible"
+        motion:layout_constraintStart_toStartOf="@id/electionDateTextView"
+        motion:layout_constraintTop_toTopOf="@+id/stateHeader" />
+
+    <Constraint
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0"
+        android:visibility="invisible"
+        motion:layout_constraintStart_toStartOf="@id/electionDateTextView"
+        motion:layout_constraintTop_toBottomOf="@id/stateCorrespondenceHeader" />
+
+    <Constraint
+        android:id="@+id/voterFollowOrUnfollowButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_padding"
+        android:layout_marginStart="@dimen/default_padding"
+        android:layout_marginEnd="@dimen/default_padding"
+        motion:layout_constraintBottom_toBottomOf="parent"
+        motion:layout_constraintEnd_toEndOf="parent"
+        motion:layout_constraintStart_toStartOf="parent" />
+  </ConstraintSet>
+
+  <ConstraintSet android:id="@+id/end">
+    <Constraint
+        android:id="@+id/electionNameToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        motion:layout_constraintTop_toTopOf="parent" />
+
+    <Constraint
+        android:id="@+id/electionDateTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding"
+        android:layout_marginBottom="@dimen/default_padding"
+        android:layout_marginStart="@dimen/default_padding"
+        android:layout_marginEnd="@dimen/default_padding"
+        motion:layout_constraintEnd_toEndOf="parent"
+        motion:layout_constraintStart_toStartOf="parent"
+        motion:layout_constraintTop_toBottomOf="@id/electionNameToolbar" />
+
+    <Constraint
+        android:id="@+id/stateHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding"
+        android:alpha="1"
+        android:visibility="visible"
+        motion:layout_constraintStart_toStartOf="@id/electionDateTextView"
+        motion:layout_constraintTop_toBottomOf="@id/electionDateTextView" />
+
+    <Constraint
+        android:id="@+id/stateLocations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        android:visibility="visible"
+        motion:layout_constraintStart_toStartOf="@id/electionDateTextView"
+        motion:layout_constraintTop_toBottomOf="@id/stateHeader" />
+
+    <Constraint
+        android:id="@+id/stateBallot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        android:visibility="visible"
+        motion:layout_constraintStart_toStartOf="@id/electionDateTextView"
+        motion:layout_constraintTop_toBottomOf="@id/stateLocations" />
+    <Constraint
+        android:id="@+id/stateGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        motion:constraint_referenced_ids="stateHeader,stateLocations,stateBallot" />
+
+    <Constraint
+        android:id="@+id/addressGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        motion:constraint_referenced_ids="stateCorrespondenceHeader,address" />
+
+    <Constraint
+        android:id="@+id/stateCorrespondenceHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_padding"
+        android:alpha="1"
+        android:visibility="visible"
+        motion:layout_constraintStart_toStartOf="@id/electionDateTextView"
+        motion:layout_constraintTop_toBottomOf="@id/stateBallot" />
+
+    <Constraint
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        android:visibility="visible"
+        motion:layout_constraintStart_toStartOf="@id/electionDateTextView"
+        motion:layout_constraintTop_toBottomOf="@id/stateCorrespondenceHeader" />
+
+    <Constraint
+        android:id="@+id/voterFollowOrUnfollowButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_padding"
+        android:layout_marginStart="@dimen/default_padding"
+        android:layout_marginEnd="@dimen/default_padding"
+        motion:layout_constraintBottom_toBottomOf="parent"
+        motion:layout_constraintEnd_toEndOf="parent"
+        motion:layout_constraintStart_toStartOf="parent" />
+  </ConstraintSet>
+
+  <Transition
+      motion:constraintSetEnd="@+id/end"
+      motion:constraintSetStart="@id/start"
+      motion:duration="2000" />
+</MotionScene>

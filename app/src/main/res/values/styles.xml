@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- TODO: Add necessary styles -->
+    <style name="ButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="boxBackgroundColor">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="DefaultTextStyle" parent="Widget.AppCompat.TextView" />
+
+    <style name="HeaderTextStyle" parent="DefaultTextStyle">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="VoterInfoToolbarTextAppearance" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ListHeader">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+</resources>
